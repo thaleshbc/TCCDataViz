@@ -22,6 +22,12 @@ hist <- data |>
     title = "Comportamento do atributo <span style='font-size:32pt; color:lightgreen'>**média**</span>",
   ) +
   ggplot2::theme(
+    axis.title.x = ggplot2::element_blank(),
+    axis.text.x = ggplot2::element_blank(),
+    axis.text.y = ggplot2::element_text(
+      size = 12,
+      color = "white"
+    ),
     panel.grid = ggplot2::element_blank(),
     panel.background = ggplot2::element_rect(
       fill = "black",
@@ -36,11 +42,6 @@ hist <- data |>
       face = "bold",
       size = 32,
       margin = ggplot2::margin(40)
-    ),
-    plot.subtitle = ggtext::element_textbox(
-      color = "white",
-      size = 22,
-      margin = ggplot2::margin(10)
     ),
     plot.caption = ggplot2::element_text(
       color = "white",
@@ -72,6 +73,10 @@ box <- data |>
   ) +
   ggplot2::theme(
     axis.text.y = ggplot2::element_blank(),
+    axis.text.x = ggplot2::element_text(
+      size = 12,
+      color = "white"
+    ),
     panel.grid = ggplot2::element_blank(),
     panel.background = ggplot2::element_rect(
       fill = "black",
@@ -86,11 +91,6 @@ box <- data |>
       face = "bold",
       size = 32,
       margin = ggplot2::margin(40)
-    ),
-    plot.subtitle = ggtext::element_textbox(
-      color = "white",
-      size = 22,
-      margin = ggplot2::margin(10)
     ),
     plot.caption = ggplot2::element_text(
       color = "white",

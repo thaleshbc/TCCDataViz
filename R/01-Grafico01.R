@@ -1,6 +1,6 @@
 
 
-data |>
+grafico01 <- data |>
   dplyr::select(
     yearpublished
   ) |>
@@ -184,3 +184,6 @@ data |>
     limits = c(1900, 2022),
     breaks = seq(1900, 2022, 20)
   )
+
+
+ggplot2::ggsave("img/Grafico01.png", grafico01, width = 40, height = 25, units = "cm", dpi = 300)

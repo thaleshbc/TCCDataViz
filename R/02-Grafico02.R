@@ -1,5 +1,5 @@
 
-data |>
+grafico02 <- data |>
   dplyr::select(
     users_rated,
     average
@@ -87,4 +87,4 @@ data |>
     )
   )
 
-
+ggplot2::ggsave("img/Grafico02.png", grafico02, width = 40, height = 25, units = "cm", dpi = 300)

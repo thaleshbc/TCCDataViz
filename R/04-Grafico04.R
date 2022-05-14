@@ -103,6 +103,6 @@ box <- data |>
 
 library(patchwork)
 
-graph <- hist / box
+grafico04 <- hist / box
 
-graph
+ggplot2::ggsave("img/Grafico04.png", grafico04, width = 40, height = 25, units = "cm", dpi = 300)

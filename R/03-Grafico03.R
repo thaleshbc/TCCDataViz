@@ -1,6 +1,6 @@
 
 
-data |>
+grafico03 <- data |>
   dplyr::select(
     average,
     playingtime
@@ -37,7 +37,7 @@ data |>
   ) +
   ggplot2::annotate(
     geom = "text",
-    x = 70,
+    x = 50,
     y = 7.3,
     hjust = 0,
     size = 4,
@@ -116,4 +116,4 @@ data |>
     )
   )
 
-
+ggplot2::ggsave("img/Grafico03.png", grafico03, width = 40, height = 25, units = "cm", dpi = 300)

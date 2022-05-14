@@ -69,7 +69,7 @@ hist <- data |>
   ggplot2::geom_histogram(
     ggplot2::aes(y = ..density..),
     color = "white",
-    fill = "lightblue",
+    fill = "lightgreen",
     alpha = .8
   ) +
   ggplot2::theme_minimal() +
@@ -78,7 +78,7 @@ hist <- data |>
     breaks = seq(0, 10, 2)
   ) +
   ggplot2::labs(
-    title = "Comportamento do atributo <span style='font-size:32pt; color:lightblue'>**média**</span>",
+    title = "Comportamento do atributo <span style='font-size:32pt; color:lightgreen'>**média**</span>",
   ) +
   ggplot2::theme(
     axis.title.x = ggplot2::element_blank(),
@@ -102,11 +102,6 @@ hist <- data |>
       size = 32,
       margin = ggplot2::margin(40)
     ),
-    plot.subtitle = ggtext::element_textbox(
-      color = "white",
-      size = 22,
-      margin = ggplot2::margin(10)
-    ),
     plot.caption = ggplot2::element_text(
       color = "white",
       size = 8,
@@ -124,7 +119,7 @@ box <- data |>
   ) +
   ggplot2::geom_boxplot(
     color = "white",
-    fill = "lightblue",
+    fill = "lightgreen",
     alpha = .8
   ) +
   ggplot2::theme_minimal() +
@@ -156,11 +151,6 @@ box <- data |>
       size = 32,
       margin = ggplot2::margin(40)
     ),
-    plot.subtitle = ggtext::element_textbox(
-      color = "white",
-      size = 22,
-      margin = ggplot2::margin(10)
-    ),
     plot.caption = ggplot2::element_text(
       color = "white",
       size = 8,
@@ -170,11 +160,11 @@ box <- data |>
   )
 
 
-library(patchwork)
+suppressMessages(library(patchwork))
 
-graph <- hist / box
+grafico04 <- hist / box
 
-graph
+grafico04
 
 ```
 
